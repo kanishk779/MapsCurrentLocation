@@ -166,7 +166,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                  all markers, overlays, and polylines from the map are cleared when we use clear on google Maps
                                  */
                                 mMap.clear();
-                                mMap.addMarker(markerOptions.position(latLng).title("Your Last Location"));
+                                mMap.addMarker(markerOptions.position(latLng).title("Your Last Location").snippet("YOur Last Location"));
                                 mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
                             }
                         }
@@ -204,7 +204,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
          all markers, overlays, and polylines from the map are cleared when we use clear on google Maps
          */
         mMap.clear();
-        mMap.addMarker(markerOptions.position(latLng).title("Your Location"));
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Your Location"));
     }
 
     @Override
